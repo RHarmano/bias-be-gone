@@ -1,0 +1,4 @@
+/* style sheet to be injected into letterboxd */
+.rating-histogram {
+    opacity: 0;
+}
