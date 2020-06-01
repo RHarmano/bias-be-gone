@@ -10,7 +10,7 @@ toggle_button.onclick = function() {
         pop_reviews_section.style.display = "none";
         recent_reviews_section.display = "none";
         what_friends_section.display = "none";
-        toggle_button.innerHTML = "Show All Reviews";
+        toggle_button.innerHTML = "Show Reviews";
     }
     else 
     {
