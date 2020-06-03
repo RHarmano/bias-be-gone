@@ -1,11 +1,11 @@
 {
-    "name": "Letterboxd Ratings Toggle (Firefox)",
-    "version": "v1.0",
+    "name": "Letterboxd Ratings Toggle",
+    "version": "1.0",
     "description": "Removes ratings and reviews from Letterboxd, to help avoid spoilers and expectations.",
     "permissions": ["declarativeContent"],
     "background": 
     {
-        "scripts": ["background.js"],
+        "scripts": ["scripts/background.js"],
         "persistent": false
     },
     "page_action": 
@@ -28,8 +28,8 @@
     "content_scripts": [
         {
             "matches": ["*://letterboxd.com/*"],
-            "css": ["style.css"],
-            "js": ["reviewtoggle.js"]
+            "css": ["scripts/style.css"],
+            "js": ["scripts/reviewtoggle.js"]
         }
     ],
     "manifest_version": 2

@@ -1,14 +1,14 @@
-firefox.runtime.onInstalled.addListener(function() 
+chrome.runtime.onInstalled.addListener(function() 
 {
-    firefox.declarativeContent.onPageChanged.removeRules(undefined, function() 
+    chrome.declarativeContent.onPageChanged.removeRules(undefined, function() 
     {
-        firefox.declarativeContent.onPageChanged.addRules([
+        chrome.declarativeContent.onPageChanged.addRules([
         {
-            conditions: [new firefox.declarativeContent.PageStateMatcher(
+            conditions: [new chrome.declarativeContent.PageStateMatcher(
             {
                 pageUrl: {hostEquals: 'letterboxd.com'},
             })],
-            actions: [new firefox.declarativeContent.ShowPageAction()]
+            actions: [new chrome.declarativeContent.ShowPageAction()]
         }]);
     });
 });

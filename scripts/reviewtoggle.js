@@ -1,7 +1,8 @@
 var toggle_button = document.createElement("button");
 toggle_button.appendChild(document.createTextNode("Toggle Reviews"));
 toggle_button.id = "toggle_button";
-toggle_button.onclick = function() {
+toggle_button.onclick = function() 
+{
     var pop_reviews_section = document.getElementById("popular-reviews");
     var recent_reviews_section = document.getElementById("recent-reviews");
     var what_friends_section = document.getElementsByClassName("activity-from-friends")[0];
