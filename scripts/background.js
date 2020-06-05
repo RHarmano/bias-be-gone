@@ -1,14 +1,41 @@
-chrome.runtime.onInstalled.addListener(function() 
+// chrome.runtime.onInstalled.addListener(function() 
+// {
+//     chrome.declarativeContent.onPageChanged.removeRules(undefined, function() 
+//     {
+//         chrome.declarativeContent.onPageChanged.addRules([
+//         {
+//             conditions: [new chrome.declarativeContent.PageStateMatcher(
+//             {
+//                 pageUrl: {hostEquals: 'letterboxd.com'},
+//             })],
+//             actions: [new chrome.declarativeContent.ShowPageAction()]
+//         }]);
+//     });
+// });
+document.addEventListener("DOMContentLoaded", function() 
 {
-    chrome.declarativeContent.onPageChanged.removeRules(undefined, function() 
+    var toggle_button = document.createElement("button");
+    toggle_button.appendChild(document.createTextNode("Toggle Reviews"));
+    toggle_button.id = "toggle_button";
+    toggle_button.onclick = function() 
     {
-        chrome.declarativeContent.onPageChanged.addRules([
+        var pop_reviews_section = document.getElementById("popular-reviews");
+        var recent_reviews_section = document.getElementById("recent-reviews");
+        var what_friends_section = document.getElementsByClassName("activity-from-friends")[0];
+        if(pop_reviews_section.style.display == "block")
         {
-            conditions: [new chrome.declarativeContent.PageStateMatcher(
-            {
-                pageUrl: {hostEquals: 'letterboxd.com'},
-            })],
-            actions: [new chrome.declarativeContent.ShowPageAction()]
-        }]);
-    });
+            pop_reviews_section.style.display = "none";
+            recent_reviews_section.display = "none";
+            what_friends_section.display = "none";
+            toggle_button.innerHTML = "Show Reviews";
+        }
+        else 
+        {
+            pop_reviews_section.style.display = "block";
+            recent_reviews_section.display = "block";
+            what_friends_section.display = "block";
+            toggle_button.innerHTML = "Hide Reviews";
+        }
+    };
+    document.getElementsByClassName("film-recent-reviews")[0].appendChild(toggle_button);
 });
