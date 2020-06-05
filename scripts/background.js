@@ -12,8 +12,7 @@
 //         }]);
 //     });
 // });
-document.addEventListener("DOMContentLoaded", function() 
-{
+window.onload = function() {
     var toggle_button = document.createElement("button");
     toggle_button.appendChild(document.createTextNode("Toggle Reviews"));
     toggle_button.id = "toggle_button";
@@ -38,4 +37,4 @@ document.addEventListener("DOMContentLoaded", function()
         }
     };
     document.getElementsByClassName("film-recent-reviews")[0].appendChild(toggle_button);
-});
+};
