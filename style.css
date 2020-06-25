@@ -1,14 +1,4 @@
 /* style sheet to be injected into letterboxd */
-/* aside .section {
-    display: none;
-}
-.activity-from-friends {
-    display: none;
-}
-.film-recent-reviews {
-    display: none;
-} */
-
 #toggle_button
 {
     margin: 10px auto 40px auto;
