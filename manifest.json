@@ -1,5 +1,4 @@
 {
-
     "name": "Letterboxd Ratings Toggle",
     "version": "2.0",
     "manifest_version": 2,
@@ -29,9 +28,12 @@
 
     "content_scripts": [
         {
-            "matches": ["*://letterboxd.com/*"],
-            "css": ["style.css"],
-            "js": ["reviewtoggle.js"]
+            "matches": ["https://letterboxd.com/film*"],
+            "js": ["content-script.js"]
+        },
+        {
+            "matches": ["https://letterboxd.com/film*"],
+            "css": ["style.css"]
         }
     ]
     
