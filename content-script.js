@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("Function call");
+function reviewToggle() {
+    console.log("function call");
     var toggle_button = document.createElement("BUTTON");
     document.getElementsByClassName("film-recent-reviews")[0].style.display = "none";
     document.getElementsByClassName("activity-from-friends")[0].style.display = "none";
@@ -27,4 +27,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     document.getElementsByClassName("sidebar")[0].appendChild(toggle_button);
-});
+}
+
+if (window.attachEvent)
+  {window.attachEvent('onload', reviewToggle);}
+else if (window.addEventListener)
+  {window.addEventListener('load', reviewToggle, false);}
+else
+  {document.addEventListener('load', reviewToggle, false);}
