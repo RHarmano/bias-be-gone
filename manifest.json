@@ -29,7 +29,12 @@
     "content_scripts": [
         {
             "matches": ["https://letterboxd.com/film*"],
-            "js": ["content-script.js"],
+            "js": ["letterbox.js"],
+            "css": ["style.css"]
+        },
+        {
+            "matches": ["https://www.imdb.com/title/*"],
+            "js": ["jQuery.js","imdb.js"],
             "css": ["style.css"]
         }
     ]

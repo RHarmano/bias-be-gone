@@ -1,4 +1,16 @@
 /* style sheet to be injected into letterboxd */
+.film-recent-reviews {
+    opacity: 0;
+}
+.activity-from-friends {
+    opacity: 0;
+}
+.ratings-histogram-chart {
+    opacity: 0;
+}
+.average-rating {
+    opacity: 0;
+}
 #toggle_button
 {
     margin: 10px auto 40px auto;
@@ -18,4 +30,8 @@
 #toggle_button:hover
 {
     background: #242c34;
+}
+/* imdb styling */
+.imdbRating {
+    opacity: 0;
 }
